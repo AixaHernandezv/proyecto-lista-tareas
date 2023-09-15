@@ -1,0 +1,83 @@
+/*fuente de google*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+/*seteamos los valores iniciales*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #ebecf0
+}
+
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.container__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #C8DEE7;
+    height:250px;
+    width: 60%;
+}
+
+.header__title{
+    color: #545454;
+    margin-top: 20px;
+    margin-top: 36px;
+}
+
+.header__task{
+    display: flex;
+    column-gap: 64px;
+    margin-top: 40px;
+}
+
+.task__task{
+    display: flex;
+    flex-direction: column;
+}
+
+.task__input{
+    width: 530px;
+    height: 34px;
+}
+
+.task__label{
+    font-weight: bold;
+}
+
+    
+.task__btn-add-task {
+    height: 53px;
+    margin-top: 16px;
+    padding: 9px;
+    background-color: #6da7cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.container__tasks{
+    display: flex;
+    height: 104px;
+    width: 60%;
+    background-color: lightyellow;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasks__task{
+    height: 70px;
+    width: 60%;
+    border: dotted;
+    border-radius: 10px;
+}
