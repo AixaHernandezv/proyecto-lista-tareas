@@ -48,6 +48,7 @@ align-items: center;
 .task__input{
     width: 530px;
     height: 34px;
+    outline: none;
 }
 
 .task__label{
@@ -68,16 +69,35 @@ align-items: center;
 
 .container__tasks{
     display: flex;
-    height: 104px;
+    min-height: 104px;
     width: 60%;
     background-color: lightyellow;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 24px 0;
 }
 
-.tasks__task{
+
+.tasks__item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+    align-items: center;
+}
+
+.item__task{
     height: 70px;
     width: 60%;
     border: dotted;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__btn{
+    font-size: 40px;
 }
