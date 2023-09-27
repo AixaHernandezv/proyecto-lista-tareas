@@ -98,6 +98,13 @@ align-items: center;
     align-items: center;
 }
 
+
+
 .item__btn{
     font-size: 40px;
+}
+
+.task__crossedout{
+    text-decoration: line-through;
+    background-color: lightgrey;
 }

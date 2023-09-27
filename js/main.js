@@ -30,17 +30,29 @@ function addTask() {
 
 function listTasks() {
     taskContainer.innerHTML='';
-    tasks.forEach(task => {
+    tasks.forEach((task, index)=> {
         const divTaskHtml = document.createElement('div');
         divTaskHtml.classList.add('tasks__item');
         divTaskHtml.innerHTML = `
             <div id="task" class=" item__task">
-                <p class="task__paragraph"> ${task} </p>
+                <p id="taskParagraph${index}" class="task__paragraph"> ${task} </p>
             </div>
-            <i  class="fa-solid fa-check item__btn"></i>
+            <i  id="btnCheck${index}"  class="fa-solid fa-check item__btn" data-id="${index}"></i>
             <i class="fa-solid fa-xmark item__btn"></i>
         `
         taskContainer.appendChild(divTaskHtml);
+        const btnCheck = document.querySelector(`#btnCheck${index}`);
+        
+        btnCheck.addEventListener('click',addClassCrossedOut);
     });
     
+}
+
+
+function addClassCrossedOut(e) {
+const index = e.target.getAttribute("data-id");
+const taskParagraph = document.querySelector(`#taskParagraph${index}`)
+taskParagraph.classList.add('task__crossedout');
+
+
 }
