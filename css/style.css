@@ -103,6 +103,18 @@ align-items: center;
 .item__btn{
     font-size: 40px;
 }
+.item__btn:hover{
+    cursor: pointer;
+}
+
+.item__btn--disabled{
+    font-size: 40px;
+    color: lightgrey;
+}
+.item__btn--disabled:hover{
+    cursor: not-allowed;
+}
+
 
 .task__crossedout{
     text-decoration: line-through;
